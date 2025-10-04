@@ -15,9 +15,9 @@ const assetsToCache = [
   '/icons/icon-114x114.png',
   '/icons/icon-120x120.png',
   '/icons/icon-180x180.png',
-  '/icons/icon-1024x1024.png',
   '/icons/playstore.png',
   '/icons/appstore.png',
+  '/icons/icon-1024x1024.png'
 ];
 
 self.addEventListener('install', event => {
