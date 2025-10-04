@@ -10,7 +10,7 @@ Este projeto foi desenvolvido para demonstrar o uso de APIs de hardware do naveg
 
 Você pode testar a aplicação acessando o link abaixo:
 
-**[Acesse a demonstração ao vivo aqui!](https://seu-link-para-o-github-pages-ou-outro-host.com)**
+**[Acesse a demonstração ao vivo aqui!](https://viczambom.github.io/PaletaCam/)**
 
 ---
 
