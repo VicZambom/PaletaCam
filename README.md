@@ -1,7 +1,5 @@
 # 🎨 Paleta Cam
 
-![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=for-the-badge&logo=pwa)
-
 > Um Progressive Web App (PWA) que extrai paletas de cores do mundo real usando a câmera do seu dispositivo.
 
 Este projeto foi desenvolvido para demonstrar o uso de APIs de hardware do navegador (Câmera), processamento de imagem no lado do cliente com a API do Canvas e o consumo de uma API externa (The Color API) para enriquecer os dados.
@@ -12,7 +10,7 @@ Este projeto foi desenvolvido para demonstrar o uso de APIs de hardware do naveg
 
 Você pode testar a aplicação acessando o link abaixo:
 
-**[Acesse a demonstração ao vivo aqui!](https://seu-link-para-o-github-pages-ou-outro-host.com)**
+**[Acesse a demonstração ao vivo aqui!](https://viczambom.github.io/PaletaCam/)**
 
 ---
 
