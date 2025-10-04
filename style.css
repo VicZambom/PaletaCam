@@ -1,0 +1,30 @@
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+#canvas {
+    display: none;
+}
+
+@media (max-height: 450px) {
+    body {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    #capture-btn {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+@media (min-width: 640px) {
+    body {
+        padding: 2rem;
+    }
+}
