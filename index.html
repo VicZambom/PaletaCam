@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Paleta Cam</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-
-    <meta name="theme-color" content="#4A5568"/>
+    <meta name="theme-color" content="#111827"/>
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Paleta Cam">
-    <link rel="apple-touch-icon" href="images/icon-192x192.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col items-center justify-between p-4">
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center p-4">
 
-    <header class="w-full max-w-lg text-center">
-        <h1 class="text-4xl font-bold text-gray-800 dark:text-white">Paleta Cam</h1>
-        <p class="mt-2 text-lg">Extraia paletas de cores do mundo real.</p>
-    </header>
+    <div id="container" class="w-full max-w-md mx-auto text-center">
+        <h1 id="title" class="text-4xl font-bold mb-2">Paleta Cam</h1>
+        <p id="subtitle" class="text-gray-400 mb-6">Aponte para algo e capture as cores</p>
 
-    <main id="app" class="w-full max-w-lg flex flex-col items-center">
-        <div id="camera-container" class="w-full aspect-video bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-4 relative">
+        <div class="relative w-full aspect-square rounded-lg overflow-hidden mb-6 shadow-lg bg-gray-800 flex items-center justify-center">
             <video id="video" class="w-full h-full object-cover" autoplay playsinline></video>
-            <p id="status-text" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-semibold">Iniciando câmera...</p>
+            <div id="loader" class="absolute">
+                <svg class="animate-spin h-10 w-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </div>
         </div>
-
-        <div id="palette-display" class="w-full grid grid-cols-2 sm:grid-cols-5 gap-2 min-h-[100px]">
-        </div>
-    </main>
-
-    <footer class="w-full max-w-lg">
-        <button id="capture-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-200 text-xl disabled:opacity-50 disabled:cursor-not-allowed">
+        
+        <button id="capture-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-all w-full mb-6">
             Capturar Cores
         </button>
-    </footer>
-    
-    <canvas id="canvas"></canvas>
 
-    <script src="script.js" defer></script>
+        <div id="palette-container" class="grid grid-cols-5 gap-2 h-20">
+        </div>
+    </div>
+
+    <canvas id="canvas" class="hidden"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>
